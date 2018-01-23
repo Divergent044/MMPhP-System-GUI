@@ -1,0 +1,17 @@
+#exitButton {
+    -fx-border-color: rgba(0, 0, 0, 0.07);
+}
+#exitButton:hover {
+    -fx-border-color: #66ccff;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+}
+#tab1, #tab2, #tab3 {
+    -fx-border-color: rgba(0, 0, 0, 0.07);
+}
+#tab1:hover, #tab2:hover, #tab3:hover {
+    -fx-border-color: #66ccff;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+}
+

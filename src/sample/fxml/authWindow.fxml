@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.ToggleSwitch?>
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<VBox id="mPanel" alignment="CENTER" maxHeight="400.0" maxWidth="400.0" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" stylesheets="@../css/authStyle.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AuthWindowController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/mephi.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </ImageView>
+      <VBox id="vPanel" alignment="CENTER" minHeight="230.0" minWidth="100.0" prefHeight="100.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Label id="surnameLabel" fx:id="surnameLabel" text="Фамилия" visible="false">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fx:id="loginImg" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="-62.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <CustomTextField id="surnameField" fx:id="surnameField" blendMode="SRC_ATOP" focusTraversable="false" prefHeight="13.0" prefWidth="230.0" promptText="Фамилия" visible="false">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="45.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                  </CustomTextField>
+                  <CustomTextField id="loginField" fx:id="loginField" focusTraversable="false" prefHeight="13.0" prefWidth="230.0" promptText="Login">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="-273.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                  </CustomTextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="nameLabel" text="Имя" visible="false">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fx:id="passwordImg" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/password.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="-27.0" top="12.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <CustomTextField id="nameField" fx:id="nameField" focusTraversable="false" prefHeight="13.0" prefWidth="230.0" promptText="Имя" visible="false">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="47.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </CustomTextField>
+                  <CustomPasswordField id="passwordField" fx:id="passwordField" focusTraversable="false" prefHeight="13.0" prefWidth="230.0" promptText="Password">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="-273.0" top="10.0" />
+                     </HBox.margin>
+                      <font>
+                          <Font name="Times New Roman" size="20.0" />
+                      </font>
+                  </CustomPasswordField>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="errorFirstLabel" text="Здесь текст ошибки" textFill="#dd0d0d" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="3.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="boxGroup" prefHeight="40.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label id="labelStudent" fx:id="groupLabel" text="Группа">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <CustomTextField id="groupField" fx:id="groupField" focusTraversable="false" prefHeight="13.0" prefWidth="230.0" promptText="Группа">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="27.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </CustomTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" top="-25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="160.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Студент" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <ToggleSwitch fx:id="toggleStudent" onMouseClicked="#toggleStudentClick" prefWidth="0.0" styleClass="toggle">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ToggleSwitch>
+                  <Label fx:id="errorSecondLabel" text="Здесь текст ошибки" textFill="#dd0d0d" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" left="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="120.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Преподаватель">
+                      <font>
+                          <Font name="Times New Roman" size="18.0" />
+                      </font>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ToggleSwitch fx:id="toggleTeacher" onMouseClicked="#toggleTeacherClick" prefWidth="0.0" styleClass="toggle">
+                     <HBox.margin>
+                        <Insets left="5.0" right="20.0" top="7.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </ToggleSwitch>
+               </children>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="7.0" right="7.0" top="5.0" />
+         </VBox.margin>
+      </VBox>
+      <Button id="button" fx:id="loginButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="70.0" text="Войти">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="230.0" top="-45.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </Button>
+   </children>
+</VBox>
